@@ -1,4 +1,4 @@
-const category = [];
+var category = [];
 
 function renderAll() {
     let html = "";
