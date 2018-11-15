@@ -1,8 +1,8 @@
-const username = "admin";
-const password = "admin";
+var username = "admin";
+var password = "admin";
 
-let userInputName;
-let userInputPassword;
+var userInputName;
+var userInputPassword;
 
 function login() {
     userInputName = document.getElementById('username').value;
