@@ -4,6 +4,7 @@
 .idea/modules.xml
 .idea/projectplanningsoftware.iml
 .idea/workspace.xml
+.idea/vcs.xml
 node_modules/
 package-lock.json
 my.patch
