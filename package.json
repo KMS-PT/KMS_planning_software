@@ -1,0 +1,26 @@
+{
+  "name": "projectplanningsoftware",
+  "version": "1.0.0",
+  "description": "KMS_Prkt",
+  "main": "Category.js",
+  "dependencies": {
+    "jest": "^23.6.0",
+    "standard": "^12.0.1"
+  },
+  "devDependencies": {
+    "qunit": "^2.8.0"
+  },
+  "scripts": {
+    "qunit": "./node_modules/qunit/bin/qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulKra/KMS_planning_software.git"
+  },
+  "author": "Tobbias, Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulKra/KMS_planning_software/issues"
+  },
+  "homepage": "https://github.com/paulKra/KMS_planning_software#readme"
+}
