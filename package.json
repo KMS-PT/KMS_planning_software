@@ -11,7 +11,7 @@
     "qunit": "^2.8.0"
   },
   "scripts": {
-    "qunit": "./node_modules/qunit/bin/qunit"
+    "test": "./node_modules/qunit/bin/qunit test.js"
   },
   "repository": {
     "type": "git",
