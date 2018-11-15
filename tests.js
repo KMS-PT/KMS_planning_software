@@ -1,8 +1,3 @@
-QUnit.test("hello test", function (assert) {
-    "use strict";
-    assert.ok(1 === 1, "Passed!");
-});
-
 QUnit.test("add Cat test", function (assert) {
     "use strict";
     const catName = "testCat";
@@ -20,3 +15,37 @@ QUnit.test("remove Cat test", function (assert) {
     const afterCountOfCats = document.getElementsByClassName("category").length;
     assert.ok(beforeCountOfCats - 1 === afterCountOfCats);
 });
+
+// QUnit.test("Add Category HTML Test", function( assert ) {
+//     var oldLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     addCat();
+//     var newLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     assert.ok( oldLength < newLength, "html added" );
+// });
+
+// QUnit.test("Add item HTML Test", function( assert ) {
+//     var oldLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     var btn;
+//     var randomInput = "hgtuighldvjdl";
+//     for (var i = 0; i < 5; i++)
+//     {
+//         btn = document.getElementById("CatogoryAddButton" + i);
+//         var inp = document.getElementById("CatogoryAddInput" + i);
+//         if (inp && btn)
+//         {
+//             inp.value = randomInput;
+//             btn.click();
+//             break;
+//         }
+//     }
+//     var newLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     assert.ok( oldLength < newLength, "html added" );
+//     assert.ok( document.getElementsByTagName("body")[0].innerHTML.indexOf(randomInput) != -1, "content present! (yay?)" );
+// });
+
+// QUnit.test("Delete Category HTML Test", function( assert ) {
+//     var oldLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     delCat(1);
+//     var newLength = document.getElementsByTagName("body")[0].innerHTML.length;
+//     assert.ok( oldLength > newLength, "html removed" );
+// });
