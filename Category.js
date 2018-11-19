@@ -1,5 +1,11 @@
 var category = [];
 
+module.exports =  {getCats, Category, pushToCats};
+
+function getCats () {
+  return category;
+}
+
 function renderAll() {
     let html = "";
     for (let i = 0; i < category.length; i++) {
@@ -77,9 +83,13 @@ function delCat(id) {
     document.getElementById("mainContainer").removeChild(document.getElementById('CategoryDiv' + id))
 }
 
+function pushToCats (newCat) {
+  category.push(newCat)
+}
+
 function createCat(newCat) {
-    category.push(newCat);
-    document.getElementById("mainContainer").innerHTML += newCat.generateHTML();
+  pushToCats(newCat)
+  document.getElementById("mainContainer").innerHTML += newCat.generateHTML();
     newCat.initFunctionality();
 }
 
