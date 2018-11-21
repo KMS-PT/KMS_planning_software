@@ -11,14 +11,14 @@ function openEditPopUp(task) {
     const date = new Date(task.innerHTML.substring(idx, idx + "2018-11-01T23:59".length));
 
 
-    let html = "";
+    var html = "";
 
 
     // language=HTML
-    html += `<input id="CatogoryAddInput${this.id}" value="${name}" onchange="editName(this.value, '${task.id}')">`;
+    html += '<input id="CatogoryAddInput${this.id}" value="${name}" onchange="editName(this.value, ' + task.id + ')">';
 
 
-    html += `<select id="CatogoryAddColorInput${this.id}" onchange="editColor(this.value, '${task.id}')"><option ${task.style.borderColor === "red" ? "selected" : ""}>red</option><option ${task.style.borderColor === "yellow" ? "selected" : ""} >yellow</option><option ${task.style.borderColor === "green" ? "selected" : ""} >green</option></select>`;
+    html += '<select id="CatogoryAddColorInput${this.id}" onchange="editColor(this.value, ' + task.id + ')"><option ' + (task.style.borderColor === "red" ? "selected" : "") + '>red</option><option ' + (task.style.borderColor === "yellow" ? "selected" : "") + '>yellow</option><option ' + (task.style.borderColor === "green" ? "selected" : "") + ' >green</option></select>';
 
 
     // html += '<input type="datetime-local" id="CatogoryAddDateInput' + this.id + '" value="'+date+'" onchange="editDate(this.value, \''+task.id+'\')">';
@@ -32,7 +32,7 @@ function openEditPopUp(task) {
 
 function editName(newName, taskID) {
     const task = document.getElementById(taskID);
-    let currentContent = task.innerHTML;
+    var currentContent = task.innerHTML;
 
     const idx = task.innerHTML.indexOf("<br>");
     currentContent = currentContent.replace(currentContent.substring(0, idx), newName);
@@ -41,7 +41,7 @@ function editName(newName, taskID) {
 
 function editDate(newName, taskID) {
     const task = document.getElementById(taskID);
-    let currentContent = task.innerHTML;
+    var currentContent = task.innerHTML;
 
     const idx = task.innerHTML.indexOf("<br>");
     const oldDate = currentContent.substring(idx, "2018-11-01T23:59".length);

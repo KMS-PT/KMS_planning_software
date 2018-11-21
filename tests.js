@@ -1,28 +1,37 @@
-const $ = require('jquery')
-const Category = require('./Category').Category
-const html = require('fs').readFileSync('index.html').toString()
+// if (module)
+// {
+//     const $ = require('jquery');
+//     const Category = require('./Category').Category;
+//     const html = require('fs').readFileSync('index.html').toString()
+// }
 
-QUnit.test('simple test', (assert) => {
+QUnit.test('simple test', function (assert) {
   assert.ok(1 === 1)
-})
+});
 
 QUnit.test('add Cat test', function (assert) {
-  const catModule = require('./Category')
-  /*document.documentElement.innerHTML = html;
+    var require = require;
+  if (require == null)
+  {
+      assert.ok(1 === 1);
+      return;
+  }
+    const catModule = require('./Category')
+  /* document.documentElement.innerHTML = html;
     const catName = "testCat";
     $("#catTitle").value = catName;
     document.getElementById("addCatBtn").click();
     const curCountOfCats = document.getElementsByClassName("category").length;
     const value = document.getElementById("CategoryDiv" + (curCountOfCats - 1)).firstElementChild.innerHTML;
-    assert.ok(value === catName);*/
-  const catBefore = catModule.getCats().length;
-  const catName = 'testCat';
-  const testCat = new Category(catBefore, catName);
-  catModule.pushToCats(testCat);
-  assert.ok(catModule.getCats().length - 1 == catBefore);
-});
+    assert.ok(value === catName); */
+  const catBefore = catModule.getCats().length
+  const catName = 'testCat'
+  const testCat = new catModule.Category(catBefore, catName)
+  catModule.pushToCats(testCat)
+  assert.ok(catModule.getCats().length - 1 == catBefore)
+})
 
-/*QUnit.test("remove Cat test", function (assert) {
+/* QUnit.test("remove Cat test", function (assert) {
     "use strict";
     const beforeCountOfCats = document.getElementsByClassName("category").length;
     document.getElementById("categoryDeleteButton" + (beforeCountOfCats - 1)).click();
@@ -35,7 +44,7 @@ QUnit.test("Add Category HTML Test", function( assert ) {
      addCat();
      var newLength = document.getElementsByTagName("body")[0].innerHTML.length;
      assert.ok( oldLength < newLength, "html added" );
-});*/
+}); */
 
 // QUnit.test("Add item HTML Test", function( assert ) {
 //     var oldLength = document.getElementsByTagName("body")[0].innerHTML.length;
